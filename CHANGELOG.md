@@ -12,10 +12,6 @@ Change types: **Added** · **Changed** · **Fixed** · **Security**.
 - Host tooltip with a "Communicates with" list.
 - **Timeline bin filters the topology** — selecting a time slice dims hosts and links with no traffic in it, in Topology, Scope and the three alternative views (previously only the Flows panel reacted).
 
-### Changed
-- **Licence** — LICENSE and README now match the in-file header: *Christophe Prince Personal License v1.0* (free use including paid audit missions; no resale, rebranding, SaaS or integration into a commercial product; resale or commercial use only after consulting the author and with written agreement). The README no longer states MIT and no longer carries the Artemis Labs name.
-- In these views, external responders are grouped in an *Internet* zone.
-
 ### Fixed
 - Topology was empty after loading a capture or the demo while the Topology tab was already open.
 
