@@ -1,12 +1,28 @@
-# OT Network Security Operations Dashboard
+<p align="center">
+  <img src="docs/banner.jpg" alt="OT Network Security Operations Dashboard" width="760">
+</p>
 
-> **A standalone, browser-based OT/ICS network traffic analyser for security auditors.**  
-> One HTML file. No installation. No backend. No internet connection required.
+<h1 align="center">OT Network Security Operations Dashboard</h1>
 
-![License: Personal v1.0](https://img.shields.io/badge/License-Christophe%20Prince%20Personal%20v1.0-blue.svg)
-![Version](https://img.shields.io/badge/version-0.11-brightgreen)
-![Protocols](https://img.shields.io/badge/protocols-Modbus%20%7C%20S7%20%7C%20DNP3%20%7C%20EtherNet%2FIP%20%7C%20FINS%20%7C%20MELSEC-orange)
-![Standard](https://img.shields.io/badge/standard-IEC%2062443-red)
+<p align="center">
+  <b>A standalone, browser-based OT/ICS network traffic analyser for security auditors.</b><br>
+  One HTML file. No installation. No backend. No internet connection required.
+</p>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/badge/License-Christophe%20Prince%20Personal%20v1.0-blue.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.11.0-brightgreen">
+  <img alt="Protocols" src="https://img.shields.io/badge/protocols-Modbus%20%7C%20S7%20%7C%20DNP3%20%7C%20EtherNet%2FIP%20%7C%20FINS%20%7C%20MELSEC-orange">
+  <img alt="Standard" src="https://img.shields.io/badge/standard-IEC%2062443-red">
+  <img alt="Offline" src="https://img.shields.io/badge/runs-100%25%20offline-lightgrey">
+</p>
+
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#see-it-in-action">Screenshots</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#license">License</a>
+</p>
 
 ---
 
@@ -15,6 +31,48 @@
 A single `.html` file you open in Chrome or Edge. Drop a `.pcap` or `.pcapng` capture file and get instant, deep visibility into your industrial network — device fingerprinting, critical command detection, inter-VLAN traffic analysis, behavioral anomalies, and a professional PDF audit report aligned with IEC 62443.
 
 Designed for use during **OT/ICS security audit missions** — no infrastructure, no cloud, no vendor dependency.
+
+---
+
+## See it in action
+
+All screenshots use the built-in **Demo** data.
+
+### Inter-VLAN traffic matrix
+Who talks to whom across segments, colour-coded by volume and risk.
+
+![Inter-VLAN matrix](docs/01_matrix.png)
+
+### Purdue-model topology
+Hosts are placed by Purdue zone and VLAN; click a host, a VLAN or a link for details, and the Flows panel follows.
+
+![Purdue topology](docs/02_topology.png)
+
+### Three more ways to read the same network
+Keep the classic topology, or switch (button bar at the top of the Topology and Scope tabs) to a view that stays readable on big captures. Hosts with problems — external or off-whitelist traffic, critical OT events — are shown in **red**, warnings in amber. Selecting a slice of the timeline dims everything that has no traffic in it.
+
+**Sankey** — traffic volume between zones; click a ribbon to filter the flows.
+
+![Sankey](docs/03_sankey.png)
+
+**Bundled circle** — every host on a circle, links bundled by zone so cross-zone traffic stands out.
+
+![Bundled circle](docs/04_bundled_circle.png)
+
+**Circle packing** — zone › VLAN › host bubbles; click a bubble to see its links to the other bubbles (double-click to zoom in).
+
+![Circle packing](docs/05_circle_packing.png)
+![Circle packing, links of one host](docs/06_circle_packing_links.png)
+
+### Security findings and host inventory
+Critical OT commands, behavioural alerts, device fingerprints — with evidence.
+
+![Analysis](docs/07_analysis.png)
+
+### Scope view
+The same topology limited to the whitelisted assets — a readable picture of a large capture.
+
+![Scope](docs/10_scope.png)
 
 ---
 
@@ -98,6 +156,7 @@ Alerts when dangerous OT commands are observed in the capture:
 - **Traffic timeline** — stacked bar chart by VLAN, click to filter flows by time interval
 - **Complete flow list** — all flows, no truncation, critical flows always surfaced first
 - **Host inventory** — every device with type, peers, ports, services, fingerprint, alerts
+- **Alternative topology views** — Sankey, Bundled circle and Circle packing, in both Topology and Scope; problems in red; click-through to the Flows panel; timeline slice dims inactive hosts
 - **Scope view** — a second topology limited to the whitelisted assets, for a readable picture of large captures (Topology keeps the full view)
 - **Scope Analysis** — host inventory and security findings restricted to the whitelisted assets, with the out-of-scope peers each asset talks to
 
@@ -196,7 +255,9 @@ VLAN40_SCADA.pcapng
 
 ## Contributing
 
-Pull requests welcome. Please open an issue first to discuss significant changes.
+Pull requests are welcome. Please open an issue first to discuss significant changes.
+
+By submitting a contribution you agree that it is provided under the same license as this project (see [License](#license)) and that the author may use, modify and relicense it as part of the project.
 
 ---
 
