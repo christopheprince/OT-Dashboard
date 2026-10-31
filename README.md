@@ -4,7 +4,7 @@
 > One HTML file. No installation. No backend. No internet connection required.
 
 ![License: Personal v1.0](https://img.shields.io/badge/License-Christophe%20Prince%20Personal%20v1.0-blue.svg)
-![Version](https://img.shields.io/badge/version-0.7-brightgreen)
+![Version](https://img.shields.io/badge/version-0.11-brightgreen)
 ![Protocols](https://img.shields.io/badge/protocols-Modbus%20%7C%20S7%20%7C%20DNP3%20%7C%20EtherNet%2FIP%20%7C%20FINS%20%7C%20MELSEC-orange)
 ![Standard](https://img.shields.io/badge/standard-IEC%2062443-red)
 
